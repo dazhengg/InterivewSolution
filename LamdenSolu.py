@@ -56,7 +56,6 @@ def remove_con_ele(nums):
 
 
 
-
 import unittest
 
 class Test(unittest.TestCase):
@@ -64,6 +63,10 @@ class Test(unittest.TestCase):
     def test_contigu_random(self):
         actual = remove_con_ele([0,1,1,1,6,4,4,0])
         expected =  [0,6,0]
+        self.assertEqual(actual, expected)
+    def test_contigu_random_not_same(self):
+        actual = remove_con_ele([5, 1, 1, 1, 6, 4, 4, 0])
+        expected = [5, 6, 0]
         self.assertEqual(actual, expected)
 
     def test_left_edgecase(self):
@@ -77,8 +80,8 @@ class Test(unittest.TestCase):
         self.assertEqual(actual,expected)
 
     def test_left_and_right_case (self):
-        actual = remove_con_ele([1,2,2,3,4])
-        expected = [1,3,4]
+        actual = remove_con_ele([1,2,2,4])
+        expected = [1,4]
         self.assertEqual(actual, expected)
 
     def test_one(self):
