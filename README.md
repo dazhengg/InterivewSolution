@@ -1,2 +1,2 @@
-# InterviewSolutionLamden
+# InterviewSolution
 Lamden Solution 
